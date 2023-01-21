@@ -1,0 +1,10 @@
+FUNCTIONALITY
+
+.Lock/unlock feature - create new tasks where each one of its elements have a unique id  X
+.Done feature  X
+.Timestamp  X
+.Slight unique color shadow on the left border of each element  X
+.Add remove button  X
+
+
+LAYOUT

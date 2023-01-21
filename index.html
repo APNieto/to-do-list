@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./scripts/script2.js"></script>
+    <title>To do list</title>
+</head>
+<body>
+
+    <h1>To do list</h1>
+
+    <div id="new-task-section">
+        <div id="task-templates-section">    <!-- TEST SECTION-->
+            <label for="task-templates">Task templates</label>
+            <select name="task-templates" id="task-templates-selector">
+                <option value="empty">*None selected*</option>
+                <option value="secretary">Tell my secretary to...</option>
+                <option value="chaffeur">Tell my chaffeur to...</option>
+                <option value="laundry">Do the laundry</option>
+                <option value="waterPlants">Water the plants</option>
+            </select>
+        </div>
+        <label for="input-new-task">New task:</label>
+        <input type="text" id="input-new-task" placeholder="Pay the bills...">
+        <button id="button-add-task">+</button>
+    </div>
+
+    <main id="list-section"></main>
+
+</body>
+</html>
