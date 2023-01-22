@@ -14,25 +14,29 @@ h1 {
 
 
 /* New task section */
-#new-task-section *{    
+.new-task-font{    
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
-#task-templates-section{
+#grid-container{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin: 0 10vw;
+    justify-items: start;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+#task-templates-section{
+    grid-column: 2 / 3;
     margin-bottom: 6px;    
 }
-#task-templates-selector{
-    grid-column: 2 / 3;
-    width: fit-content;
+#label-new-task{
+    grid-column: 1 / 2;   
+    justify-self: end; 
+    margin-right: 10px;
 }
 #new-task-input-section{    
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 0 10vw;
-    align-items: center;
+    grid-column: 2 / 3;
     font-size: 1.3rem;
 }
 #new-task-input-section > label {
@@ -65,16 +69,12 @@ h1 {
 
 /* Tasks */
 #list-section{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin: 0 10vw;
+    grid-column: 2 / 3;
 }
 .task-element{
     display: flex;
     justify-content: center;
     margin-top: 14px;
-    grid-column: 2 / 3;
-    width: fit-content;
 }
 
 .task-description{

@@ -12,9 +12,9 @@
 
     <h1>Your ToDo list</h1>
 
-    <div id="new-task-section">
+    <main id="grid-container">
         <div id="task-templates-section">
-            <select name="task-templates" id="task-templates-selector">
+            <select name="task-templates" id="task-templates-selector" class="new-task-font">
                 <option value="empty">--Task templates--</option>
                 <option value="secretary">Tell my secretary to...</option>
                 <option value="chaffeur">Tell my chaffeur to...</option>
@@ -22,16 +22,17 @@
                 <option value="waterPlants">Water the plants</option>
             </select>
         </div>
+    
+        <label for="input-new-task" id="label-new-task" class="new-task-font">New task:</label>    
         <div id="new-task-input-section">            
-            <label for="input-new-task">New task:</label>
             <div id="input-new-task-container">                    
-                <input type="text" id="input-new-task" placeholder="Pay the bills...">
+                <input type="text" id="input-new-task" class="new-task-font" placeholder="Pay the bills...">
                 <button id="button-add-task">+</button>
             </div>
         </div>
-    </div>
-
-    <section id="list-section"></section>
+    
+        <section id="list-section"></section>
+    </main>
 
 </body>
 </html>
