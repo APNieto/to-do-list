@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Oldenburg&family=Roboto:ital,wght@0,300;1,100&display=swap');
 
 body{
-    /* background-color: rgb(255, 246, 226); */
+    display: flex;
+    flex-direction: column;    
+    min-height: 98vh;
     background: linear-gradient(90deg, rgb(255, 253, 248), rgb(255, 223, 162));
     text-align: center;
+    margin: 0;
+}
+#empty-space{    
+    flex: 1;
 }
 h1 {    
     font-size: 2rem;
