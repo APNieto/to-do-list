@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Oldenburg&family=Roboto:ital,wght@0,300;1,100&display=swap');
+
+body{
+    background-color: rgb(255, 246, 226);
+    text-align: center;
+}
+h1 {    
+    font-family: 'Emblema One', cursive;
+    margin: 30px 0;
+}
+
+
+
+/* New task section */
+#new-task-section *{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+#task-templates-section{
+    margin-bottom: 8px;
+}
+#new-task-input-section *{
+    font-size: 1.5rem;
+}
 #button-add-task:focus{
     outline: 0.5px black initial;    
     border-radius: 2px;
@@ -5,12 +29,15 @@
 
 
 
+/* Tasks */
 .task-element{
-    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
 }
 
 .task-description{
-
+    font-family: 'Oldenburg', cursive;
 }
 
 .task-lock-button{
@@ -26,7 +53,9 @@
 }
 
 .timestamp{
-    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;    
+    font-style: italic;
 }
 
 .task-done{

@@ -69,7 +69,7 @@ function createNewTask() {
 
 function selectTemplate() {
     let selectedOptionText = taskTemplatesSelector.selectedOptions[0].textContent
-    if (selectedOptionText == '*None selected*') {        
+    if (selectedOptionText == '--Task templates--') {        
         // If no template is selected, the input content gets erased and focus goes there
         inputNewTask.value = ''
         inputNewTask.focus()

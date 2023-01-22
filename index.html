@@ -10,22 +10,24 @@
 </head>
 <body>
 
-    <h1>To do list</h1>
+    <h1>Your ToDo list</h1>
 
     <div id="new-task-section">
         <div id="task-templates-section">    <!-- TEST SECTION-->
-            <label for="task-templates">Task templates</label>
+            <!-- <label for="task-templates">Task templates</label> -->
             <select name="task-templates" id="task-templates-selector">
-                <option value="empty">*None selected*</option>
+                <option value="empty">--Task templates--</option>
                 <option value="secretary">Tell my secretary to...</option>
                 <option value="chaffeur">Tell my chaffeur to...</option>
                 <option value="laundry">Do the laundry</option>
                 <option value="waterPlants">Water the plants</option>
             </select>
         </div>
-        <label for="input-new-task">New task:</label>
-        <input type="text" id="input-new-task" placeholder="Pay the bills...">
-        <button id="button-add-task">+</button>
+        <div id="new-task-input-section">            
+            <label for="input-new-task">New task:</label>
+            <input type="text" id="input-new-task" placeholder="Pay the bills...">
+            <button id="button-add-task">+</button>
+        </div>
     </div>
 
     <main id="list-section"></main>
