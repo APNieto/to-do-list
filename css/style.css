@@ -2,7 +2,7 @@
 
 body{
     /* background-color: rgb(255, 246, 226); */
-    background: linear-gradient(90deg, rgb(255, 253, 248), rgb(252, 229, 185));
+    background: linear-gradient(90deg, rgb(255, 253, 248), rgb(255, 223, 162));
     text-align: center;
 }
 h1 {    
@@ -19,19 +19,35 @@ h1 {
     font-weight: 300;
 }
 #task-templates-section{
-    margin-left: -120px;
-    margin-bottom: 6px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 10vw;
+    margin-bottom: 6px;    
 }
-#new-task-input-section{
-    display: flex;
-    justify-content: center;
+#task-templates-selector{
+    grid-column: 2 / 3;
+    width: fit-content;
+}
+#new-task-input-section{    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 10vw;
     align-items: center;
     font-size: 1.3rem;
 }
+#new-task-input-section > label {
+    margin-right: 6px;
+}
+#input-new-task-container{
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    width: fit-content;    
+}
 #input-new-task {    
-    width: 300px;
+    width: clamp(100px, 46vw, 300px);
     height: 20px;
-    margin: 0 6px 0 12px;
+    margin-right: 6px;
     padding: 10px 8px;
     font-size: 1rem;
 }
@@ -48,10 +64,17 @@ h1 {
 
 
 /* Tasks */
+#list-section{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 10vw;
+}
 .task-element{
     display: flex;
     justify-content: center;
     margin-top: 14px;
+    grid-column: 2 / 3;
+    width: fit-content;
 }
 
 .task-description{

@@ -60,7 +60,7 @@ function createNewTask() {
         newTaskTimestamp.classList.add('timestamp')
         newTaskElement.append(newTaskTimestamp)
         // Append the whole container to the list section
-        newTaskElement.taskDone = false
+        newTaskElement.taskDone = false        
         listSection.appendChild(newTaskElement)
         inputNewTask.value = ''
         inputNewTask.focus()
