@@ -79,13 +79,13 @@ h1 {
     align-items: center;
     margin-top: 18px;
 }
-
 .task-description{
     font-family: 'Roboto', sans-serif;
     box-sizing: content-box;
     width: clamp(240px, 52vw, 300px);
     height: 30px;
     padding: 0 8px;
+    font-size: 1rem;
 }
 .task-sub-container{
     display: flex;
@@ -94,9 +94,9 @@ h1 {
 }
 .task-button-container > button {
     box-sizing: content-box;
-    width: 18px;
-    height: 24px;
-    margin: 0 3px;
+    width: 22px;
+    height: 28px;
+    margin: 0 6px;
     background-position: center;
     background-size: 18px;
     background-repeat: no-repeat;
