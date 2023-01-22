@@ -86,19 +86,20 @@ h1 {
 .task-description{
     font-family: 'Roboto', sans-serif;
     box-sizing: content-box;
-    width: clamp(240px, 52vw, 300px);
+    width: clamp(180px, 52vw, 300px);
     height: 30px;
     padding: 0 8px;
     font-size: 1rem;
 }
 .task-sub-container{
+    width: clamp(140px, 20vw, 300px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 .task-button-container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap;    
 }
 .task-button-container > button {
     box-sizing: content-box;
@@ -138,7 +139,6 @@ h1 {
 .task-remove-button{
     background-image: url(../icons/icons8-trash-can-24.png);
 }
-
 .timestamp{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;    
