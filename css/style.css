@@ -127,32 +127,55 @@ h1 {
     border: 1px solid rgb(118, 118, 118);
     border-radius: 4px;
 }
-.task-button-container > button:hover {
-   background-color: rgb(229, 229, 229);
-   border:rgb(79, 79, 79) solid 1px;
-}
-.task-button-container > button:active {
-   background-color: rgb(240, 240, 240);
-   border:rgb(79, 79, 79) inset 1px;
-}
 .task-button-container > button:first-of-type{
     margin-left: 10px;
 }
-
 .task-lock-button{
     background-image: url(../icons/icons8-lock-24.png);
+}
+.task-lock-button:hover {
+    background-color: rgb(229, 229, 229);
+    border:rgb(79, 79, 79) solid 1px;
+}
+.task-lock-button:active {
+    background-color: rgb(240, 240, 240);
+    border:rgb(79, 79, 79) inset 1px;
+    transform: translate(1px, 1px);
 }
 .task-lock-button-unlocked{
     background-image: url(../icons/icons8-padlock-24.png);
 }
 .task-done-button{
     background-image: url(../icons/icons8-done-24.png);
+    background-color: rgba(48, 255, 6, 0.432);
+}
+.task-done-button:hover{
+    background-color: rgba(43, 255, 0, 0.89);
+}
+.task-done-button:active{
+    background-color: rgb(34, 206, 0);
+    transform: translate(1px, 1px);
 }
 .task-done-button-undo{
     background-image: url(../icons/icons8-restart-24.png);
+    background-color: rgba(255, 123, 0, 0.308);
+}
+.task-done-button-undo:hover{
+    background-color: rgba(253, 122, 0, 0.986);
+}
+.task-done-button-undo:active{
+    background-color: rgb(218, 105, 0);
 }
 .task-remove-button{
     background-image: url(../icons/icons8-trash-can-24.png);
+    background-color: rgba(255, 6, 48, 0.432);
+}
+.task-remove-button:hover{
+    background-color: rgba(255, 0, 43, 0.884);
+}
+.task-remove-button:active{
+    background-color: rgb(202, 0, 34);
+    transform: translate(1px, 1px);
 }
 .timestamp{
     font-family: 'Roboto', sans-serif;
