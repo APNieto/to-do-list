@@ -18,61 +18,81 @@ inputNewTask.focus()
 
 
 
+// Classes
+class TaskElement {
+    constructor(taskDescription) {
+        this.createNewTaskElement(taskDescription)
+    }
+
+    createNewTaskElement(taskDescription) {
+        if (taskDescription) {        
+            counterId++
+            
+            // Create a new task element, sub-container and button container
+            let newTaskElement = document.createElement('div')    
+            newTaskElement.id = `taskElement-${counterId}`
+            newTaskElement.classList.add('task-element') 
+            let newTaskButtonContainer = document.createElement('div')    
+            newTaskButtonContainer.id = `taskButtonContainer-${counterId}`
+            newTaskButtonContainer.classList.add('task-button-container') 
+            let newTaskSubContainer = document.createElement('div')    
+            newTaskSubContainer.id = `taskSubContainer-${counterId}`
+            newTaskSubContainer.classList.add('task-sub-container') 
+            
+            // Create and append text of new element
+            let newTaskDescription = document.createElement('input')
+            newTaskDescription.id = `taskDescription-${counterId}`
+            newTaskDescription.classList.add('task-description')
+            newTaskDescription.value = taskDescription
+            newTaskDescription.disabled = true
+            newTaskDescription.style.boxShadow = `-5px 0px 5px -3px hsla(${taskColor}, 100%, 65%, 0.75)`
+            taskColor += 20
+            newTaskElement.append(newTaskDescription)
+            
+            // Create and append lock/unlock button of new element
+            let newTaskLockButton = document.createElement('button')
+            newTaskLockButton.id = `taskLockButton-${counterId}`
+            newTaskLockButton.classList.add('task-lock-button')
+            newTaskLockButton.addEventListener('click', lockUnlockTask)
+            newTaskButtonContainer.append(newTaskLockButton)    
+            
+            // Create and append 'done' button of new element
+            let newTaskDoneButton = document.createElement('button')
+            newTaskDoneButton.id = `taskDoneButton-${counterId}`
+            newTaskDoneButton.classList.add('task-done-button')
+            newTaskDoneButton.addEventListener('click', markAsDone)
+            newTaskButtonContainer.append(newTaskDoneButton)
+            
+            // Create and append 'remove' button of new element
+            let newTaskRemoveButton = document.createElement('button')
+            newTaskRemoveButton.id = `taskRemoveButton-${counterId}`
+            newTaskRemoveButton.classList.add('task-remove-button')
+            newTaskRemoveButton.addEventListener('click', removeTask)
+            newTaskButtonContainer.append(newTaskRemoveButton)
+            newTaskSubContainer.append(newTaskButtonContainer)
+            
+            // Create and append timestamp of new element
+            let newTaskTimestamp = document.createElement('p')
+            newTaskTimestamp.id = `timestamp-${counterId}`
+            newTaskTimestamp.textContent = generateTimestamp()
+            newTaskTimestamp.classList.add('timestamp')
+            newTaskSubContainer.append(newTaskTimestamp)
+            newTaskElement.append(newTaskSubContainer)
+            
+            // Append the whole container to the list section
+            newTaskElement.taskDone = false        
+            listSection.appendChild(newTaskElement)
+            inputNewTask.value = ''
+            inputNewTask.focus()
+        }
+    }
+}
+
+
+
 // Functions
 function createNewTask() {
-    if (inputNewTask.value) {        
-        counterId++
-        // Create a new task element, sub-container and button container
-        let newTaskElement = document.createElement('div')    
-        newTaskElement.id = `taskElement-${counterId}`
-        newTaskElement.classList.add('task-element') 
-        let newTaskButtonContainer = document.createElement('div')    
-        newTaskButtonContainer.id = `taskButtonContainer-${counterId}`
-        newTaskButtonContainer.classList.add('task-button-container') 
-        let newTaskSubContainer = document.createElement('div')    
-        newTaskSubContainer.id = `taskSubContainer-${counterId}`
-        newTaskSubContainer.classList.add('task-sub-container') 
-        // Create and append text of new element
-        let newTaskDescription = document.createElement('input')
-        newTaskDescription.id = `taskDescription-${counterId}`
-        newTaskDescription.classList.add('task-description')
-        newTaskDescription.value = inputNewTask.value
-        newTaskDescription.disabled = true
-        newTaskDescription.style.boxShadow = `-5px 0px 5px -3px hsla(${taskColor}, 100%, 65%, 0.75)`
-        taskColor += 20
-        newTaskElement.append(newTaskDescription)
-        // Create and append lock/unlock button of new element
-        let newTaskLockButton = document.createElement('button')
-        newTaskLockButton.id = `taskLockButton-${counterId}`
-        newTaskLockButton.classList.add('task-lock-button')
-        newTaskLockButton.addEventListener('click', lockUnlockTask)
-        newTaskButtonContainer.append(newTaskLockButton)    
-        // Create and append 'done' button of new element
-        let newTaskDoneButton = document.createElement('button')
-        newTaskDoneButton.id = `taskDoneButton-${counterId}`
-        newTaskDoneButton.classList.add('task-done-button')
-        newTaskDoneButton.addEventListener('click', markAsDone)
-        newTaskButtonContainer.append(newTaskDoneButton)
-        // Create and append 'remove' button of new element
-        let newTaskRemoveButton = document.createElement('button')
-        newTaskRemoveButton.id = `taskRemoveButton-${counterId}`
-        newTaskRemoveButton.classList.add('task-remove-button')
-        newTaskRemoveButton.addEventListener('click', removeTask)
-        newTaskButtonContainer.append(newTaskRemoveButton)
-        newTaskSubContainer.append(newTaskButtonContainer)
-        // Create and append timestamp of new element
-        let newTaskTimestamp = document.createElement('p')
-        newTaskTimestamp.id = `timestamp-${counterId}`
-        newTaskTimestamp.textContent = generateTimestamp()
-        newTaskTimestamp.classList.add('timestamp')
-        newTaskSubContainer.append(newTaskTimestamp)
-        newTaskElement.append(newTaskSubContainer)
-        // Append the whole container to the list section
-        newTaskElement.taskDone = false        
-        listSection.appendChild(newTaskElement)
-        inputNewTask.value = ''
-        inputNewTask.focus()
-    }
+    let newTaskElement = new TaskElement(inputNewTask.value)    
 }
 
 function selectTemplate() {
